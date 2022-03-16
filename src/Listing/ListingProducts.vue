@@ -1,8 +1,6 @@
 <template>
   <div class="row">
-    <div class="col-1" v-for="(product, index) in products" :key="index">
-     
-    </div>
+    <p>ici produits</p>
   </div>
 </template>
 <script>
