@@ -1,7 +1,8 @@
 <template>
   <div class="row">
+  
     <div class="col-1" v-for="(product, index) in products" :key="index">
-     
+      <button type="button" class="btn" >{{ product }}</button>
     </div>
   </div>
 </template>
