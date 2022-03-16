@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="col-1" v-for="(category, index) in categories" :key="index">
-      <button type="button" class="btn ">{{category}}</button>
+      <button type="button" class="btn" @click="goToProduct(category)">{{ category }}</button>
     </div>
   </div>
 </template>
@@ -26,6 +26,9 @@ export default {
           },
         })
         .then((response) => (this.categories = response.data));
+    },
+    goToProduct($category) {
+     window.location.href ="/home/"+$category;
     },
   },
 };
