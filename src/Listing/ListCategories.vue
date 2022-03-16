@@ -28,7 +28,7 @@ export default {
         .then((response) => (this.categories = response.data));
     },
     goToProduct($category) {
-     window.location.href ="/home/"+$category;
+     window.location.href ="/products/"+$category;
     },
   },
 };
