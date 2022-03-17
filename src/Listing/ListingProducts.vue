@@ -50,6 +50,7 @@
                   class="btn-close"
                   data-bs-dismiss="modal"
                   aria-label="Close"
+                  
                 ></button>
               </div>
               <div class="styleModal">
@@ -76,6 +77,7 @@
                   type="button"
                   class="btn btn-secondary"
                   data-bs-dismiss="modal"
+                  
                 >
                   Close
                 </button>
@@ -124,7 +126,7 @@ export default {
     },
     export() {
       axios.get(
-        "http://37.187.244.116:5000/export/" + this.$route.params.category,
+        "http://37.187.244.116:5000/export",
         {
           headers: {
             "Access-Control-Allow-Origin": "*",
@@ -146,10 +148,12 @@ export default {
        'Content-Type': 'application/json'
           },
         })
-        .then((response) =>
-          this.$toast("My toast content"+response.data, {
-            timeout: 2000,
-          })
+        .then(
+          this.$toast("Traitement effectuée avec succès", {
+            duaration: 2000,
+              })
+       
+          
            
         );
     },
