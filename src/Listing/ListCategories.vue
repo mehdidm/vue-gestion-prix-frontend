@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <div class="col-1" v-for="(category, index) in categories" :key="index">
+    <div class="col-2" v-for="(category, index) in categories" :key="index">
       <button type="button" class="btn" @click="goToProduct(category)">{{ category }}</button>
     </div>
   </div>

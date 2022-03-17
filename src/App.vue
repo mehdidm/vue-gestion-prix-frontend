@@ -1,14 +1,13 @@
 <template>
   <div id="app">
-   
-      <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Gestion des prix </a>
-        <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-  </nav>
-    <router-view/>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Gestion des prix </a>
+<br/>
+        <router-link class="navbar-brand" to="/">Catégories</router-link> |
+      </div>
+    </nav>
+    <router-view />
   </div>
 </template>
 
@@ -24,6 +23,7 @@
 nav {
   padding: 30px;
 }
+
 
 nav a {
   font-weight: bold;
