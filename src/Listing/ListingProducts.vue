@@ -1,6 +1,6 @@
 <template>
   <div class="tab1">
-    <button type="button" style="margin: 10px" class="btn btn-dark">
+    <button type="button" style="margin: 10px" class="btn btn-dark" @click="exportfile()" >
       Exporter fichier
     </button>
     <table class="table table-hover product-table mx-auto">
@@ -124,7 +124,7 @@ export default {
         )
         .then((response) => (this.products = response.data.products));
     },
-    export() {
+    exportfile() {
       axios.get(
         "http://37.187.244.116:5000/export",
         {
@@ -151,6 +151,7 @@ export default {
         .then(
           this.$toast("Traitement effectuée avec succès", {
             duaration: 2000,
+            onhidden:   this.$router.push('/') 
               })
        
           
