@@ -125,15 +125,7 @@ export default {
         .then((response) => (this.products = response.data.products));
     },
     exportfile() {
-      axios.get(
-        "http://37.187.244.116:5000/export",
-        {
-          headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Content-type": "application/json",
-          },
-        }
-      );
+    window.location.href="http://37.187.244.116:5000/export"
     },
     sendInfo(item) {
       this.selectedUser = item;
@@ -151,7 +143,7 @@ export default {
         .then(
           this.$toast("Traitement effectuée avec succès", {
             duaration: 2000,
-            onhidden:   this.$router.push('/') 
+            onDismiss:   this.$router.push('/') 
               })
        
           
